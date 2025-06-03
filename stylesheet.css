@@ -310,6 +310,10 @@ nav a:hover {
     color: var(--secondary-color);
 }
 
+.no-shows-message .social-icon i {
+    font-size: 32px;
+}
+
 /* Contact Section */
 .contact-section {
     padding: 80px 20px;
