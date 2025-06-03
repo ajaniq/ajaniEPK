@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shows - Ajani Quibuyen</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
@@ -21,34 +22,35 @@
         <section class="shows-section">
             <h2>UPCOMING SHOWS</h2>
             <div class="shows-container">
-                <div class="show-card">
-                    <div class="show-date">DATE</div>
-                    <div class="show-venue">LOCATION</div>
-                    <div class="show-details">
-                        <p>NAME OF EVENT</p>
-                        <p>TIME</p>
-                    </div>
-                    <a href="lost_page.html" class="ticket-btn">MORE INFO</a>
-                </div>
+                <!-- Shows List -->
+                <ul class="shows-list" style="display: none;">
+                    <li class="show-item">
+                        <div class="show-date">APRIL 13, 2024</div>
+                        <div class="show-details">
+                            <div class="show-venue">CLUB C4NV4S</div>
+                            <div class="show-location">@honne.space</div>
+                            <div class="show-time">10:00 PM</div>
+                        </div>
+                        <a href="https://www.instagram.com/honne.space/" target="_blank" class="ticket-btn">MORE INFO</a>
+                    </li>
+                    <li class="show-item">
+                        <div class="show-date">MARCH 21, 2024</div>
+                        <div class="show-details">
+                            <div class="show-venue">RHEIN HAUS</div>
+                            <div class="show-location">@rheinhausseattle</div>
+                            <div class="show-time">9:00 PM</div>
+                        </div>
+                        <a href="https://www.instagram.com/rheinhausseattle/" target="_blank" class="ticket-btn">MORE INFO</a>
+                    </li>
+                </ul>
 
-                <div class="show-card">
-                    <div class="show-date">DATE</div>
-                    <div class="show-venue">LOCATION</div>
-                    <div class="show-details">
-                        <p>NAME OF EVENT</p>
-                        <p>TIME</p>
-                    </div>
-                    <a href="lost_page.html" class="ticket-btn">MORE INFO</a>
-                </div>
-
-                <div class="show-card">
-                    <div class="show-date">DATE</div>
-                    <div class="show-venue">LOCATION</div>
-                    <div class="show-details">
-                        <p>NAME OF EVENT</p>
-                        <p>TIME</p>
-                    </div>
-                    <a href="lost_page.html" class="ticket-btn">MORE INFO</a>
+                <!-- No Shows Message (hidden by default) -->
+                <div class="no-shows-message">
+                    <h3>SIKEEE</h3>
+                    <p>i'm lame and don't have any coming up but follow me to stay up to date on future ones.</p>
+                    <a href="https://www.instagram.com/ajani.wav/?hl=en" class="social-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -57,9 +59,15 @@
         <div class="footer-content">
             <h3>FOLLOW ME</h3>
             <div class="social-icons">
-                <a href="https://www.instagram.com/ajani.wav/?hl=en" class="social-icon">INSTAGRAM</a>
-                <a href="https://soundcloud.com/ajaniwav" class="social-icon">SOUNDCLOUD</a>
-                <a href="https://www.youtube.com/@ajani2075" class="social-icon">YOUTUBE</a>
+                <a href="https://www.instagram.com/ajani.wav/?hl=en" class="social-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://soundcloud.com/ajaniwav" class="social-icon" target="_blank">
+                    <i class="fab fa-soundcloud"></i>
+                </a>
+                <a href="https://www.youtube.com/@ajani2075" class="social-icon" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
             </div>
             <p>&copy; 2024 AJANI QUIBUYEN. All rights reserved.</p>
         </div>
