@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.disabled = true;
             
             // Send email using EmailJS
-            emailjs.sendForm('service_4o4ajbs', 'template_z5h7ivi', contactForm)
+            emailjs.sendForm('service_4o4ajbs', 'template_z6txw7k', contactForm)
                 .then(function() {
                     alert('Thank you for your message! We will get back to you soon.');
                     contactForm.reset();
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Send email function
 function sendEmail(e) {
   e.preventDefault();
-  emailjs.sendForm('service_4o4ajbs', 'template_z5h7ivi', e.target)
+  emailjs.sendForm('service_4o4ajbs', 'template_z6txw7k', e.target)
     .then(() => alert('Message sent!'))
     .catch(err => alert('Error sending message'));
 } 
