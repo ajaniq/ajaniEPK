@@ -1,3 +1,6 @@
+// Initialize EmailJS with your public key
+emailjs.init("uAZMRTYeK7uSdAKSb");
+
 // Contact form handling
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
@@ -6,17 +9,38 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+            // Show loading state
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
             
-            // I plan on setting up a server to send the form data when I use this website outside of class
-            alert('Thank you for your message! We will get back to you soon.');
-            
-            // Clear the form
-            contactForm.reset();
+            // Send email using EmailJS
+            emailjs.sendForm('service_4o4ajbs', 'template_z5h7ivi', contactForm)
+                .then(function() {
+                    alert('Thank you for your message! We will get back to you soon.');
+                    contactForm.reset();
+                })
+                .catch(function(error) {
+                    alert('Sorry, there was an error sending your message. Please try again later.');
+                    console.error('EmailJS error:', error);
+                })
+                .finally(function() {
+                    // Reset button state
+                    submitButton.textContent = originalButtonText;
+                    submitButton.disabled = false;
+                });
         });
     }
 }); 
+
+// Add EmailJS script to your HTML
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+// Send email function
+function sendEmail(e) {
+  e.preventDefault();
+  emailjs.sendForm('service_4o4ajbs', 'template_z5h7ivi', e.target)
+    .then(() => alert('Message sent!'))
+    .catch(err => alert('Error sending message'));
+} 
